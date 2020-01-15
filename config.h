@@ -186,8 +186,6 @@ ResourcePref resources[] = {
  */
 static MouseShortcut mshortcuts[] = {
 	/* button               mask            string */
-	{ Button4,              XK_NO_MOD,      "\031" },
-	{ Button5,              XK_NO_MOD,      "\005" },
 };
 
 /* Internal keyboard shortcuts. */
@@ -195,12 +193,10 @@ static MouseShortcut mshortcuts[] = {
 
 MouseKey mkeys[] = {
 	/* button               mask            function        argument */
-	{ Button4,              ShiftMask,      kscrollup,      {.i =  1} },
-	{ Button5,              ShiftMask,      kscrolldown,    {.i =  1} },
-	{ Button4,              MODKEY,         kscrollup,      {.i =  1} },
-	{ Button5,              MODKEY,         kscrolldown,    {.i =  1} },
-	{ Button4,              MODKEY|ShiftMask,         zoom,      {.f =  +1} },
-	{ Button5,              MODKEY|ShiftMask,         zoom,    {.f =  -1} },
+	{ Button4,              XK_NO_MOD,      kscrollup,      {.i =  1} },
+	{ Button5,              XK_NO_MOD,      kscrolldown,    {.i =  1} },
+	{ Button4,              MODKEY,         zoom,      {.f =  +1} },
+	{ Button5,              MODKEY,         zoom,    {.f =  -1} },
 };
 
 static char *openurlcmd[] = { "/bin/sh", "-c",
